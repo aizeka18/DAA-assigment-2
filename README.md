@@ -50,23 +50,6 @@ BuildHeap: Σ_{i=0}^{h} (n/2^{i+1})·O(i) = O(n)
 
 ### Optimized Architecture
 
-
-  ```java
-// Iterative Heapify - Stack Safe & Efficient
-private void heapifyDown(int i) {
-    int current = i;
-    while (hasLeftChild(current)) {
-        int largest = leftChild(current);
-        if (hasRightChild(current) && 
-            heap[rightChild(current)] > heap[largest]) {
-            largest = rightChild(current);
-        }
-        if (heap[current] >= heap[largest]) break;
-        swap(current, largest);
-        current = largest;
-    }
- }
-```
 Key Features
  Iterative Algorithms - No stack overflow risk
 
